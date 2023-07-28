@@ -1,0 +1,8 @@
+services:
+  vim:
+    build:
+      context: vim
+    command: vim -c 'PlugInstall --sync' -c close
+    volumes:
+      - ./vim/.vimrc:/root/.vimrc
+      - ./vim/.vim:/root/.vim
